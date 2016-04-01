@@ -150,7 +150,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "HangManForm";
-            this.Text = "Hangman by Madde";
+            this.Text = "Hangman by madbys";
             this.Shown += new System.EventHandler(this.Form1_Shown);
             this.groupBoxHangman.ResumeLayout(false);
             this.groupBoxWord.ResumeLayout(false);

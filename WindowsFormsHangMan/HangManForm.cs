@@ -25,17 +25,17 @@ namespace WindowsFormsHangMan
                 
         private void Form1_Shown(object sender, EventArgs e)
         {
-            ResetGame();
+            Reset();
         }
 
 
-        private void ResetGame()
+        private void Reset()
         {
             Graphics g = panel1.CreateGraphics();
             g.Clear(panel1.BackColor);
             GetRandomWord();
-            MakeLabels();
-            DrawHangPost();
+            DoLabels();
+            DrawingHangPost();
             labelMissedLetters.Text = "Missed: ";
             textBoxLetter.Text = "";
         }
@@ -47,7 +47,7 @@ namespace WindowsFormsHangMan
             return randomWord;
         }
 
-        private void MakeLabels()
+        private void DoLabels()
         {
             word = GetRandomWord();
             char[] chars = word.ToCharArray(); //\n
@@ -65,10 +65,10 @@ namespace WindowsFormsHangMan
             labelWorldLength.Text = "Word length: " + (chars.Length).ToString();
         }
 
-        private void DrawHangPost()
+        private void DrawingHangPost()
         {
             Graphics g = panel1.CreateGraphics();
-            Pen pen = new Pen(Color.Brown, 10); //Draw post
+            Pen pen = new Pen(Color.BurlyWood, 10); //Draw post
             g.DrawLine(pen, new Point(150, 240),new Point(150, 5));
             g.DrawLine(pen, new Point(155, 5), new Point(75, 5));
             g.DrawLine(pen, new Point(70, 0), new Point(70, 50));
@@ -77,7 +77,7 @@ namespace WindowsFormsHangMan
         private void DrawBodyParts(BodyParts bp)
         {
             Graphics g = panel1.CreateGraphics();
-            Pen pen = new Pen(Color.Blue, 2);
+            Pen pen = new Pen(Color.Black, 2);
 
             if (bp == BodyParts.Head)
             {
@@ -85,12 +85,12 @@ namespace WindowsFormsHangMan
             }
             else if (bp == BodyParts.Left_Eye)
             {
-                SolidBrush sb = new SolidBrush(Color.Black);
+                SolidBrush sb = new SolidBrush(Color.Blue);
                 g.FillEllipse(sb, 60, 60, 7, 5);
             }
             else if (bp == BodyParts.Right_Eye)
             {
-                SolidBrush sb = new SolidBrush(Color.Black);
+                SolidBrush sb = new SolidBrush(Color.Blue);
                 g.FillEllipse(sb, 75, 60, 7, 5);
             }
             else if (bp == BodyParts.Mouth)
@@ -161,12 +161,10 @@ namespace WindowsFormsHangMan
                         
                     
                 MessageBox.Show("You have won!", "Congratz!!");
-                    ResetGame();
+                    Reset();
             }
             else
             {
-               // MessageBox.Show("The letter you guessed is not in the word", "Missed");
-                
                 labelMissedLetters.Text += " " + letter.ToString() + ",";
 
                 textBoxLetter.Clear();
@@ -176,8 +174,8 @@ namespace WindowsFormsHangMan
                 amount++;
                 if(amount == 9)
                 {
-                    MessageBox.Show("Sorry, you lost. The word was " + word, "Lost!");
-                    ResetGame();
+                    MessageBox.Show("Sorry, you lost the game. The word was " + word, "Lost!");
+                    Reset();
                 }
 
             }
@@ -188,8 +186,8 @@ namespace WindowsFormsHangMan
         {
             if (textBoxWord.Text == word)
             {
-                MessageBox.Show("You have won!", "Congratz!!");
-                ResetGame();
+                MessageBox.Show("You have WON!", "Congratz!!");
+                Reset();
             }
             else
             {
@@ -200,7 +198,7 @@ namespace WindowsFormsHangMan
                 if (amount == 9)
                 {
                     MessageBox.Show("Sorry, you lost. The word was " + word, "Lost!");
-                    ResetGame();
+                    Reset();
                 }
             }
         }
