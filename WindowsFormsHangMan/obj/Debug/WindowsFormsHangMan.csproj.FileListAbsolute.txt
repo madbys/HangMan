@@ -1,8 +1,0 @@
-D:\ProjectsDirectory\TestProjects\VisualStudio\WindowsFormsHangMan\WindowsFormsHangMan\bin\Debug\WindowsFormsHangMan.exe.config
-D:\ProjectsDirectory\TestProjects\VisualStudio\WindowsFormsHangMan\WindowsFormsHangMan\bin\Debug\WindowsFormsHangMan.exe
-D:\ProjectsDirectory\TestProjects\VisualStudio\WindowsFormsHangMan\WindowsFormsHangMan\bin\Debug\WindowsFormsHangMan.pdb
-D:\ProjectsDirectory\TestProjects\VisualStudio\WindowsFormsHangMan\WindowsFormsHangMan\obj\Debug\WindowsFormsHangMan.HangManForm.resources
-D:\ProjectsDirectory\TestProjects\VisualStudio\WindowsFormsHangMan\WindowsFormsHangMan\obj\Debug\WindowsFormsHangMan.Properties.Resources.resources
-D:\ProjectsDirectory\TestProjects\VisualStudio\WindowsFormsHangMan\WindowsFormsHangMan\obj\Debug\WindowsFormsHangMan.csproj.GenerateResource.Cache
-D:\ProjectsDirectory\TestProjects\VisualStudio\WindowsFormsHangMan\WindowsFormsHangMan\obj\Debug\WindowsFormsHangMan.exe
-D:\ProjectsDirectory\TestProjects\VisualStudio\WindowsFormsHangMan\WindowsFormsHangMan\obj\Debug\WindowsFormsHangMan.pdb
